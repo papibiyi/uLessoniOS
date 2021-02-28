@@ -11,6 +11,8 @@
 		CD0D00F125EA32DE004F5AD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D00F025EA32DE004F5AD1 /* SceneDelegate.swift */; };
 		CD0D00F825EA32E0004F5AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0D00F725EA32E0004F5AD1 /* Assets.xcassets */; };
 		CD0D00FB25EA32E0004F5AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0D00F925EA32E0004F5AD1 /* LaunchScreen.storyboard */; };
+		CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */; };
+		CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65425EC12DF00E3AD3E /* OFL.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		CD0D00F725EA32E0004F5AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0D00FA25EA32E0004F5AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0D00FC25EA32E0004F5AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
+		CDCEC65425EC12DF00E3AD3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		CD0D00ED25EA32DE004F5AD1 /* uLessoniOS */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC64E25EC129400E3AD3E /* main */,
 				CDCEC64C25EC123A00E3AD3E /* assets */,
 				CDCEC64825EC121A00E3AD3E /* app */,
 				CD0D00FC25EA32E0004F5AD1 /* Info.plist */,
@@ -81,8 +86,49 @@
 		CDCEC64D25EC124800E3AD3E /* font */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC65225EC12DF00E3AD3E /* Itim */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		CDCEC64E25EC129400E3AD3E /* main */ = {
+			isa = PBXGroup;
+			children = (
+				CDCEC65125EC12BA00E3AD3E /* extensions */,
+				CDCEC65025EC12B200E3AD3E /* feature */,
+				CDCEC64F25EC12A400E3AD3E /* network */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		CDCEC64F25EC12A400E3AD3E /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		CDCEC65025EC12B200E3AD3E /* feature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = feature;
+			sourceTree = "<group>";
+		};
+		CDCEC65125EC12BA00E3AD3E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CDCEC65225EC12DF00E3AD3E /* Itim */ = {
+			isa = PBXGroup;
+			children = (
+				CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */,
+				CDCEC65425EC12DF00E3AD3E /* OFL.txt */,
+			);
+			path = Itim;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +188,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */,
 				CD0D00FB25EA32E0004F5AD1 /* LaunchScreen.storyboard in Resources */,
+				CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */,
 				CD0D00F825EA32E0004F5AD1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
