@@ -23,6 +23,7 @@
 		CDCEC67D25EC27D300E3AD3E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */; };
 		CDCEC68425EC2DE300E3AD3E /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC68325EC2DE300E3AD3E /* CustomViewController.swift */; };
 		CDCEC6A425EC35D100E3AD3E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */; };
+		CDCEC6A825EC381600E3AD3E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC6A725EC381600E3AD3E /* ResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		CDCEC68325EC2DE300E3AD3E /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		CDCEC6A725EC381600E3AD3E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		CDCEC64E25EC129400E3AD3E /* main */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC6A625EC380700E3AD3E /* Model */,
 				CDCEC65C25EC14FE00E3AD3E /* custom */,
 				CDCEC65125EC12BA00E3AD3E /* extensions */,
 				CDCEC65025EC12B200E3AD3E /* module */,
@@ -193,6 +196,14 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		CDCEC6A625EC380700E3AD3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDCEC6A725EC381600E3AD3E /* ResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,6 +281,7 @@
 				CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */,
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
+				CDCEC6A825EC381600E3AD3E /* ResponseModel.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
 				CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */,
 				CDCEC68425EC2DE300E3AD3E /* CustomViewController.swift in Sources */,
