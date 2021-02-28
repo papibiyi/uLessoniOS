@@ -21,7 +21,7 @@ class NetworkManager {
         var urlComponent = URLComponents(string: url)
         
         guard let url = urlComponent?.url else {
-            completionHandler(.failure(CustomHttpError.Unknown(error: "An Unknown error occured.\nTry again later")))
+            completionHandler(.failure(CustomHttpError.Unknown(error: String(format: UnknownError.unknownErrorArgs, UnknownError.badUrl.rawValue))))
             return}
         
         var request = URLRequest(url: url)
@@ -43,7 +43,7 @@ class NetworkManager {
         }
         
         guard let session = session else {
-            completionHandler(.failure(CustomHttpError.Unknown(error: "Invalid Session")))
+            completionHandler(.failure(CustomHttpError.Unknown(error: String(format: UnknownError.unknownErrorArgs, UnknownError.session.rawValue))))
             return}
         
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -56,7 +56,7 @@ class NetworkManager {
 
             //Handle Server related error
             guard let httpResponse = response as? HTTPURLResponse else {
-                completionHandler(.failure(CustomHttpError.Unknown(error: "An Unknown error occured.\nTry again later")))
+                completionHandler(.failure(CustomHttpError.Unknown(error: String(format: UnknownError.unknownErrorArgs, UnknownError.httpResponse.rawValue))))
                 return}
             
             switch httpResponse.statusCode {
@@ -66,11 +66,11 @@ class NetworkManager {
                     return
                 }else {
                     guard let data = data else {
-                        completionHandler(.failure(CustomHttpError.Unknown(error: "An Unknown error occured.\nTry again later")))
+                        completionHandler(.failure(CustomHttpError.Unknown(error: String(format: UnknownError.unknownErrorArgs, UnknownError.data.rawValue))))
                         return}
                     
                     guard let t = T.self as? T else {
-                        completionHandler(.failure(CustomHttpError.Unknown(error: "An Unknown error occured.\nTry again later")))
+                        completionHandler(.failure(CustomHttpError.Unknown(error: String(format: UnknownError.unknownErrorArgs, UnknownError.decodableType.rawValue))))
                         return}
                     
                     completionHandler(JSONDecoder.decode(type: t, from: data))
@@ -80,7 +80,7 @@ class NetworkManager {
             case (500...599):
                 completionHandler(.failure(CustomHttpError.ServerError))
             default:
-                completionHandler(.failure(CustomHttpError.Unknown(error: "An Unknown error occured.\nTry again later")))
+                completionHandler(.failure(CustomHttpError.Unknown(error: String(format: UnknownError.unknownErrorArgs, UnknownError.unknown.rawValue))))
             }
         }
         
