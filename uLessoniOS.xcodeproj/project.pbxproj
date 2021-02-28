@@ -14,6 +14,8 @@
 		CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */; };
 		CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65425EC12DF00E3AD3E /* OFL.txt */; };
 		CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */; };
+		CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65D25EC151100E3AD3E /* CustomHttpError.swift */; };
+		CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC66025EC156E00E3AD3E /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		CDCEC65425EC12DF00E3AD3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		CDCEC65D25EC151100E3AD3E /* CustomHttpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHttpError.swift; sourceTree = "<group>"; };
+		CDCEC66025EC156E00E3AD3E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		CDCEC64E25EC129400E3AD3E /* main */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC65C25EC14FE00E3AD3E /* customClass */,
 				CDCEC65125EC12BA00E3AD3E /* extensions */,
 				CDCEC65025EC12B200E3AD3E /* feature */,
 				CDCEC64F25EC12A400E3AD3E /* network */,
@@ -120,6 +125,7 @@
 		CDCEC65125EC12BA00E3AD3E /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC66025EC156E00E3AD3E /* UIViewController+Extension.swift */,
 				CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */,
 			);
 			path = extensions;
@@ -132,6 +138,14 @@
 				CDCEC65425EC12DF00E3AD3E /* OFL.txt */,
 			);
 			path = Itim;
+			sourceTree = "<group>";
+		};
+		CDCEC65C25EC14FE00E3AD3E /* customClass */ = {
+			isa = PBXGroup;
+			children = (
+				CDCEC65D25EC151100E3AD3E /* CustomHttpError.swift */,
+			);
+			path = customClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */,
+				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
+				CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */,
 				CD0D00F125EA32DE004F5AD1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
