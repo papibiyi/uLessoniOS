@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIFont {
-    static func itimRegular(size: CGFloat) -> UIFont {
-        return UIFont(name: "Itim-Regular", size: size) ?? UIFont()
+    static func itimRegular(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Itim-Regular", size: size)
     }
 }

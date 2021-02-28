@@ -21,6 +21,8 @@
 		CDCEC67225EC20AF00E3AD3E /* JsonDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC67125EC20AF00E3AD3E /* JsonDecoder+Extension.swift */; };
 		CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC67725EC249F00E3AD3E /* UnknownError.swift */; };
 		CDCEC67D25EC27D300E3AD3E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */; };
+		CDCEC68425EC2DE300E3AD3E /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC68325EC2DE300E3AD3E /* CustomViewController.swift */; };
+		CDCEC6A425EC35D100E3AD3E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		CDCEC67125EC20AF00E3AD3E /* JsonDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonDecoder+Extension.swift"; sourceTree = "<group>"; };
 		CDCEC67725EC249F00E3AD3E /* UnknownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownError.swift; sourceTree = "<group>"; };
 		CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		CDCEC68325EC2DE300E3AD3E /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 		CDCEC66B25EC168500E3AD3E /* class */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC68325EC2DE300E3AD3E /* CustomViewController.swift */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */,
+				CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -259,12 +265,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDCEC66725EC164300E3AD3E /* NetworkManager.swift in Sources */,
+				CDCEC6A425EC35D100E3AD3E /* DashboardView.swift in Sources */,
 				CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */,
 				CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */,
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
 				CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */,
+				CDCEC68425EC2DE300E3AD3E /* CustomViewController.swift in Sources */,
 				CDCEC67D25EC27D300E3AD3E /* DashboardViewController.swift in Sources */,
 				CDCEC67225EC20AF00E3AD3E /* JsonDecoder+Extension.swift in Sources */,
 				CD0D00F125EA32DE004F5AD1 /* SceneDelegate.swift in Sources */,
