@@ -16,6 +16,9 @@
 		CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */; };
 		CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65D25EC151100E3AD3E /* CustomHttpError.swift */; };
 		CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC66025EC156E00E3AD3E /* UIViewController+Extension.swift */; };
+		CDCEC66725EC164300E3AD3E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC66625EC164300E3AD3E /* NetworkManager.swift */; };
+		CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC66D25EC16AF00E3AD3E /* RequestType.swift */; };
+		CDCEC67225EC20AF00E3AD3E /* JsonDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC67125EC20AF00E3AD3E /* JsonDecoder+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		CDCEC65D25EC151100E3AD3E /* CustomHttpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHttpError.swift; sourceTree = "<group>"; };
 		CDCEC66025EC156E00E3AD3E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		CDCEC66625EC164300E3AD3E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CDCEC66D25EC16AF00E3AD3E /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		CDCEC67125EC20AF00E3AD3E /* JsonDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonDecoder+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +106,7 @@
 		CDCEC64E25EC129400E3AD3E /* main */ = {
 			isa = PBXGroup;
 			children = (
-				CDCEC65C25EC14FE00E3AD3E /* customClass */,
+				CDCEC65C25EC14FE00E3AD3E /* custom */,
 				CDCEC65125EC12BA00E3AD3E /* extensions */,
 				CDCEC65025EC12B200E3AD3E /* feature */,
 				CDCEC64F25EC12A400E3AD3E /* network */,
@@ -111,6 +117,7 @@
 		CDCEC64F25EC12A400E3AD3E /* network */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC66625EC164300E3AD3E /* NetworkManager.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 			children = (
 				CDCEC66025EC156E00E3AD3E /* UIViewController+Extension.swift */,
 				CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */,
+				CDCEC67125EC20AF00E3AD3E /* JsonDecoder+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -140,12 +148,29 @@
 			path = Itim;
 			sourceTree = "<group>";
 		};
-		CDCEC65C25EC14FE00E3AD3E /* customClass */ = {
+		CDCEC65C25EC14FE00E3AD3E /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				CDCEC66C25EC169400E3AD3E /* enum */,
+				CDCEC66B25EC168500E3AD3E /* class */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		CDCEC66B25EC168500E3AD3E /* class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		CDCEC66C25EC169400E3AD3E /* enum */ = {
 			isa = PBXGroup;
 			children = (
 				CDCEC65D25EC151100E3AD3E /* CustomHttpError.swift */,
+				CDCEC66D25EC16AF00E3AD3E /* RequestType.swift */,
 			);
-			path = customClass;
+			path = enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,10 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCEC66725EC164300E3AD3E /* NetworkManager.swift in Sources */,
 				CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */,
+				CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */,
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
 				CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */,
+				CDCEC67225EC20AF00E3AD3E /* JsonDecoder+Extension.swift in Sources */,
 				CD0D00F125EA32DE004F5AD1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
