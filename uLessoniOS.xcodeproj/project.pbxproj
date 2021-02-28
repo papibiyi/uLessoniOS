@@ -20,6 +20,7 @@
 		CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC66D25EC16AF00E3AD3E /* RequestType.swift */; };
 		CDCEC67225EC20AF00E3AD3E /* JsonDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC67125EC20AF00E3AD3E /* JsonDecoder+Extension.swift */; };
 		CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC67725EC249F00E3AD3E /* UnknownError.swift */; };
+		CDCEC67D25EC27D300E3AD3E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CDCEC66D25EC16AF00E3AD3E /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		CDCEC67125EC20AF00E3AD3E /* JsonDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonDecoder+Extension.swift"; sourceTree = "<group>"; };
 		CDCEC67725EC249F00E3AD3E /* UnknownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownError.swift; sourceTree = "<group>"; };
+		CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,7 @@
 			children = (
 				CDCEC65C25EC14FE00E3AD3E /* custom */,
 				CDCEC65125EC12BA00E3AD3E /* extensions */,
-				CDCEC65025EC12B200E3AD3E /* feature */,
+				CDCEC65025EC12B200E3AD3E /* module */,
 				CDCEC64F25EC12A400E3AD3E /* network */,
 			);
 			path = main;
@@ -124,11 +126,12 @@
 			path = network;
 			sourceTree = "<group>";
 		};
-		CDCEC65025EC12B200E3AD3E /* feature */ = {
+		CDCEC65025EC12B200E3AD3E /* module */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC67B25EC27B000E3AD3E /* Dashboard */,
 			);
-			path = feature;
+			path = module;
 			sourceTree = "<group>";
 		};
 		CDCEC65125EC12BA00E3AD3E /* extensions */ = {
@@ -174,6 +177,14 @@
 				CDCEC67725EC249F00E3AD3E /* UnknownError.swift */,
 			);
 			path = enum;
+			sourceTree = "<group>";
+		};
+		CDCEC67B25EC27B000E3AD3E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
 				CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */,
+				CDCEC67D25EC27D300E3AD3E /* DashboardViewController.swift in Sources */,
 				CDCEC67225EC20AF00E3AD3E /* JsonDecoder+Extension.swift in Sources */,
 				CD0D00F125EA32DE004F5AD1 /* SceneDelegate.swift in Sources */,
 			);
