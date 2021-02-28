@@ -13,6 +13,7 @@
 		CD0D00FB25EA32E0004F5AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0D00F925EA32E0004F5AD1 /* LaunchScreen.storyboard */; };
 		CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */; };
 		CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65425EC12DF00E3AD3E /* OFL.txt */; };
+		CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CD0D00FC25EA32E0004F5AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		CDCEC65425EC12DF00E3AD3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		CDCEC65125EC12BA00E3AD3E /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
 				CD0D00F125EA32DE004F5AD1 /* SceneDelegate.swift in Sources */,
 			);
