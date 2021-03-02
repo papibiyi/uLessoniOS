@@ -18,7 +18,7 @@ class SubjectCollectionViewCell: UICollectionViewCell {
     
     let cellTitle: UILabel = {
         let label = UILabel()
-        label.font = UIFont.itimRegular(size: 32)
+        label.font = UIFont.of(type: Font.Itim.regular.rawValue, size: 32)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

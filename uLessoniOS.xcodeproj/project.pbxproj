@@ -17,6 +17,7 @@
 		CDC8BA9425EE4BA800DC2B3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA8F25EE4BA800DC2B3E /* OFL.txt */; };
 		CDC8BA9525EE4BA800DC2B3E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA9025EE4BA800DC2B3E /* README.txt */; };
 		CDC8BA9625EE4BA800DC2B3E /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA9125EE4BA800DC2B3E /* Mulish-SemiBold.ttf */; };
+		CDC8BA9A25EE4DA600DC2B3E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BA9925EE4DA600DC2B3E /* Font.swift */; };
 		CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */; };
 		CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65425EC12DF00E3AD3E /* OFL.txt */; };
 		CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */; };
@@ -45,6 +46,7 @@
 		CDC8BA8F25EE4BA800DC2B3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		CDC8BA9025EE4BA800DC2B3E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CDC8BA9125EE4BA800DC2B3E /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
+		CDC8BA9925EE4DA600DC2B3E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		CDCEC65425EC12DF00E3AD3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				CDCEC65D25EC151100E3AD3E /* CustomHttpError.swift */,
 				CDCEC66D25EC16AF00E3AD3E /* RequestType.swift */,
 				CDCEC67725EC249F00E3AD3E /* UnknownError.swift */,
+				CDC8BA9925EE4DA600DC2B3E /* Font.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				CDCEC66725EC164300E3AD3E /* NetworkManager.swift in Sources */,
 				CDCEC6A425EC35D100E3AD3E /* DashboardView.swift in Sources */,
+				CDC8BA9A25EE4DA600DC2B3E /* Font.swift in Sources */,
 				CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */,
 				CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */,
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,

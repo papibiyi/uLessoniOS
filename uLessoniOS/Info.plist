@@ -61,6 +61,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Itim-Regular.ttf</string>
+		<string>Mulish-Regular.ttf</string>
+		<string>Mulish-Bold.ttf</string>
+		<string>Mulish-SemiBold.ttf</string>
 	</array>
 </dict>
 </plist>
