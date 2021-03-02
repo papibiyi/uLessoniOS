@@ -23,7 +23,11 @@ class SubjectCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(with subject: Subject) {
+        let resolver = SubjectDataResolver.resolve(name: subject.name ?? "")
         cellTitle.text = subject.name
+        cellIconImageView.image = UIImage(named: resolver.icon)
+        cellBackgroundImageView.image = UIImage(named: resolver.image)
+        contentView.backgroundColor =  UIColor(named: resolver.color)
     }
     
     private let cellTitle: UILabel = {

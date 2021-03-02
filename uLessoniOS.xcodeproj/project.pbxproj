@@ -17,7 +17,7 @@
 		CDC8BA9525EE4BA800DC2B3E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA9025EE4BA800DC2B3E /* README.txt */; };
 		CDC8BA9625EE4BA800DC2B3E /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA9125EE4BA800DC2B3E /* Mulish-SemiBold.ttf */; };
 		CDC8BA9A25EE4DA600DC2B3E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BA9925EE4DA600DC2B3E /* Font.swift */; };
-		CDC8BA9E25EE505F00DC2B3E /* SubjectImageDataResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BA9D25EE505F00DC2B3E /* SubjectImageDataResolver.swift */; };
+		CDC8BA9E25EE505F00DC2B3E /* SubjectDataResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BA9D25EE505F00DC2B3E /* SubjectDataResolver.swift */; };
 		CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */; };
 		CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65425EC12DF00E3AD3E /* OFL.txt */; };
 		CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */; };
@@ -46,7 +46,7 @@
 		CDC8BA9025EE4BA800DC2B3E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CDC8BA9125EE4BA800DC2B3E /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
 		CDC8BA9925EE4DA600DC2B3E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		CDC8BA9D25EE505F00DC2B3E /* SubjectImageDataResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectImageDataResolver.swift; sourceTree = "<group>"; };
+		CDC8BA9D25EE505F00DC2B3E /* SubjectDataResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDataResolver.swift; sourceTree = "<group>"; };
 		CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		CDCEC65425EC12DF00E3AD3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CDCEC68325EC2DE300E3AD3E /* CustomViewController.swift */,
-				CDC8BA9D25EE505F00DC2B3E /* SubjectImageDataResolver.swift */,
+				CDC8BA9D25EE505F00DC2B3E /* SubjectDataResolver.swift */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
 				CDCEC6A825EC381600E3AD3E /* ResponseModel.swift in Sources */,
-				CDC8BA9E25EE505F00DC2B3E /* SubjectImageDataResolver.swift in Sources */,
+				CDC8BA9E25EE505F00DC2B3E /* SubjectDataResolver.swift in Sources */,
 				CDC8BA8925EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
 				CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */,
