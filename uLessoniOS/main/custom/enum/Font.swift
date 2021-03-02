@@ -14,7 +14,7 @@ enum Font {
     
     enum Mulish: String {
         case regular = "Mulish-Regular"
-        case bold = "Mulish-Bold.ttf"
-        case semiBold = "Mulish-SemiBold.ttf"
+        case bold = "Mulish-Bold"
+        case semiBold = "Mulish-SemiBold"
     }
 }
