@@ -10,6 +10,7 @@ import UIKit
 class DashboardView: UIView {
     
     var collectionViewHeightConstraint: NSLayoutConstraint?
+    var onScrollViewRefreshed = {}
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,7 +20,7 @@ class DashboardView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     let helloLabel: UILabel = {
         let label = UILabel()
         label.text = "Hello Simbi"
@@ -47,15 +48,18 @@ class DashboardView: UIView {
         collectionViewFlowLayout.minimumInteritemSpacing = 10
         collectionViewFlowLayout.minimumLineSpacing = 10
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
-        collectionView.backgroundColor = .red
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionViewHeightConstraint = collectionView.heightAnchor.constraint(equalToConstant: 0)
         collectionViewHeightConstraint?.isActive = true
+        collectionView.backgroundColor = .clear
+        collectionView.register(SubjectCollectionViewCell.self, forCellWithReuseIdentifier: SubjectCollectionViewCell.id)
         return collectionView
     }()
     
-    private let scrollView: UIScrollView = {
+    lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
+        scrollView.refreshControl = UIRefreshControl()
+        scrollView.refreshControl?.addTarget(self, action: #selector(scrollViewRefreshed), for: .valueChanged)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
@@ -73,7 +77,7 @@ class DashboardView: UIView {
     
 
     func updateCollectionViewHeight(byCount: Int) {
-        let heightConstant = CGFloat(88)
+        let heightConstant = CGFloat(100)
         if byCount == 2 || byCount == 1 {
             collectionViewHeightConstraint?.constant = heightConstant
         }else if byCount == 4 {
@@ -85,6 +89,9 @@ class DashboardView: UIView {
         }
     }
     
+    @objc private func scrollViewRefreshed() {
+        onScrollViewRefreshed()
+    }
     
     private func setupView(){
         self.backgroundColor = UIColor(red: 0.929, green: 0.929, blue: 0.933, alpha: 1)

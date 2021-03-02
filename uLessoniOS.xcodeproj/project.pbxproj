@@ -19,7 +19,7 @@
 		CDC8BA9A25EE4DA600DC2B3E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BA9925EE4DA600DC2B3E /* Font.swift */; };
 		CDC8BA9E25EE505F00DC2B3E /* SubjectDataResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BA9D25EE505F00DC2B3E /* SubjectDataResolver.swift */; };
 		CDC8BAA225EE5F2D00DC2B3E /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAA125EE5F2D00DC2B3E /* DashboardViewModel.swift */; };
-		CDC8BAA525EE5F6400DC2B3E /* DashboardViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAA425EE5F6400DC2B3E /* DashboardViewModelDelegate.swift */; };
+		CDC8BAA525EE5F6400DC2B3E /* DataFetchedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */; };
 		CDC8BAA825EE608800DC2B3E /* DashboardWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */; };
 		CDC8BAAB25EE62E600DC2B3E /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */; };
 		CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */; };
@@ -52,7 +52,7 @@
 		CDC8BA9925EE4DA600DC2B3E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		CDC8BA9D25EE505F00DC2B3E /* SubjectDataResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDataResolver.swift; sourceTree = "<group>"; };
 		CDC8BAA125EE5F2D00DC2B3E /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		CDC8BAA425EE5F6400DC2B3E /* DashboardViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelDelegate.swift; sourceTree = "<group>"; };
+		CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchedDelegate.swift; sourceTree = "<group>"; };
 		CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWebService.swift; sourceTree = "<group>"; };
 		CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
 		CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 				CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */,
 				CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */,
 				CDC8BAA125EE5F2D00DC2B3E /* DashboardViewModel.swift */,
-				CDC8BAA425EE5F6400DC2B3E /* DashboardViewModelDelegate.swift */,
+				CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */,
 				CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */,
 				CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */,
 			);
@@ -335,7 +335,7 @@
 				CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */,
 				CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */,
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
-				CDC8BAA525EE5F6400DC2B3E /* DashboardViewModelDelegate.swift in Sources */,
+				CDC8BAA525EE5F6400DC2B3E /* DataFetchedDelegate.swift in Sources */,
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
 				CDCEC6A825EC381600E3AD3E /* ResponseModel.swift in Sources */,
 				CDC8BAA225EE5F2D00DC2B3E /* DashboardViewModel.swift in Sources */,

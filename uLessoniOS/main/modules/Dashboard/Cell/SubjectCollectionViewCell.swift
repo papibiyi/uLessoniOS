@@ -8,8 +8,10 @@
 import UIKit
 
 class SubjectCollectionViewCell: UICollectionViewCell {
+    static let id = "\(SubjectCollectionViewCell.self)"
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
     }
     
     required init?(coder: NSCoder) {
@@ -32,13 +34,16 @@ class SubjectCollectionViewCell: UICollectionViewCell {
     
     private let cellTitle: UILabel = {
         let label = UILabel()
-        label.font = UIFont.of(type: Font.Mulish.bold.rawValue, size: 12)
+        label.textAlignment = .right
+        label.textColor = .white
+        label.font = UIFont.of(type: Font.Mulish.bold.rawValue, size: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let cellIconImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
         imageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,9 +61,11 @@ class SubjectCollectionViewCell: UICollectionViewCell {
 
     
     private func setupView(){
+        self.contentView.layer.masksToBounds = true
+        self.contentView.layer.cornerRadius = 13
         self.contentView.addSubview(cellBackgroundImageView)
-        self.contentView.addSubview(cellTitle)
         self.contentView.addSubview(cellIconImageView)
+        self.contentView.addSubview(cellTitle)
         
         cellBackgroundImageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         cellBackgroundImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
@@ -70,7 +77,7 @@ class SubjectCollectionViewCell: UICollectionViewCell {
         cellIconImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 12).isActive = true
 
         cellTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12).isActive = true
+        cellTitle.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 12).isActive = true
         cellTitle.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -12).isActive = true
-
     }
 }
