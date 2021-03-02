@@ -17,6 +17,10 @@ class DashboardViewController: CustomViewController<DashboardView> {
         setupScrollView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)    }
+    
     private func setupScrollView(){
         self.contentView.scrollView.refreshControl?.beginRefreshing()
         self.contentView.onScrollViewRefreshed = {[weak self] in

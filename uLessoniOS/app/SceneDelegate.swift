@@ -51,7 +51,7 @@ extension SceneDelegate {
     private func startApp(scene: UIScene){
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = DashboardViewController()
+            window.rootViewController = UINavigationController(rootViewController: DashboardViewController())
             self.window = window
             window.makeKeyAndVisible()
         }
