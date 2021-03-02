@@ -21,7 +21,7 @@ class DashboardView: UIView {
     let helloLabel: UILabel = {
         let label = UILabel()
         label.text = "Hello Simbi"
-        label.font = UIFont.itimRegular(size: 32)
+        label.font = UIFont.of(type: Font.Itim.regular.rawValue, size: 32)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
