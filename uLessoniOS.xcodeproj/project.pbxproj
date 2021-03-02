@@ -11,6 +11,12 @@
 		CD0D00F125EA32DE004F5AD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D00F025EA32DE004F5AD1 /* SceneDelegate.swift */; };
 		CD0D00F825EA32E0004F5AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0D00F725EA32E0004F5AD1 /* Assets.xcassets */; };
 		CD0D00FB25EA32E0004F5AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0D00F925EA32E0004F5AD1 /* LaunchScreen.storyboard */; };
+		CDC8BA8925EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BA8825EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift */; };
+		CDC8BA9225EE4BA800DC2B3E /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA8D25EE4BA800DC2B3E /* Mulish-Regular.ttf */; };
+		CDC8BA9325EE4BA800DC2B3E /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA8E25EE4BA800DC2B3E /* Mulish-Bold.ttf */; };
+		CDC8BA9425EE4BA800DC2B3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA8F25EE4BA800DC2B3E /* OFL.txt */; };
+		CDC8BA9525EE4BA800DC2B3E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA9025EE4BA800DC2B3E /* README.txt */; };
+		CDC8BA9625EE4BA800DC2B3E /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA9125EE4BA800DC2B3E /* Mulish-SemiBold.ttf */; };
 		CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */; };
 		CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65425EC12DF00E3AD3E /* OFL.txt */; };
 		CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */; };
@@ -33,6 +39,12 @@
 		CD0D00F725EA32E0004F5AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0D00FA25EA32E0004F5AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0D00FC25EA32E0004F5AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC8BA8825EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		CDC8BA8D25EE4BA800DC2B3E /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		CDC8BA8E25EE4BA800DC2B3E /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
+		CDC8BA8F25EE4BA800DC2B3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		CDC8BA9025EE4BA800DC2B3E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		CDC8BA9125EE4BA800DC2B3E /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
 		CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		CDCEC65425EC12DF00E3AD3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -86,6 +98,26 @@
 			path = uLessoniOS;
 			sourceTree = "<group>";
 		};
+		CDC8BA8725EE4A3700DC2B3E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8BA8825EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CDC8BA8C25EE4BA800DC2B3E /* Mulish */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8BA8D25EE4BA800DC2B3E /* Mulish-Regular.ttf */,
+				CDC8BA8E25EE4BA800DC2B3E /* Mulish-Bold.ttf */,
+				CDC8BA8F25EE4BA800DC2B3E /* OFL.txt */,
+				CDC8BA9025EE4BA800DC2B3E /* README.txt */,
+				CDC8BA9125EE4BA800DC2B3E /* Mulish-SemiBold.ttf */,
+			);
+			path = Mulish;
+			sourceTree = "<group>";
+		};
 		CDCEC64825EC121A00E3AD3E /* app */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +140,7 @@
 		CDCEC64D25EC124800E3AD3E /* font */ = {
 			isa = PBXGroup;
 			children = (
+				CDC8BA8C25EE4BA800DC2B3E /* Mulish */,
 				CDCEC65225EC12DF00E3AD3E /* Itim */,
 			);
 			path = font;
@@ -119,7 +152,7 @@
 				CDCEC6A625EC380700E3AD3E /* Model */,
 				CDCEC65C25EC14FE00E3AD3E /* custom */,
 				CDCEC65125EC12BA00E3AD3E /* extensions */,
-				CDCEC65025EC12B200E3AD3E /* module */,
+				CDCEC65025EC12B200E3AD3E /* modules */,
 				CDCEC64F25EC12A400E3AD3E /* network */,
 			);
 			path = main;
@@ -133,12 +166,12 @@
 			path = network;
 			sourceTree = "<group>";
 		};
-		CDCEC65025EC12B200E3AD3E /* module */ = {
+		CDCEC65025EC12B200E3AD3E /* modules */ = {
 			isa = PBXGroup;
 			children = (
 				CDCEC67B25EC27B000E3AD3E /* Dashboard */,
 			);
-			path = module;
+			path = modules;
 			sourceTree = "<group>";
 		};
 		CDCEC65125EC12BA00E3AD3E /* extensions */ = {
@@ -190,6 +223,7 @@
 		CDCEC67B25EC27B000E3AD3E /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CDC8BA8725EE4A3700DC2B3E /* Cell */,
 				CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */,
 				CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */,
 			);
@@ -261,10 +295,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC8BA9425EE4BA800DC2B3E /* OFL.txt in Resources */,
 				CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */,
 				CD0D00FB25EA32E0004F5AD1 /* LaunchScreen.storyboard in Resources */,
+				CDC8BA9625EE4BA800DC2B3E /* Mulish-SemiBold.ttf in Resources */,
 				CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */,
+				CDC8BA9325EE4BA800DC2B3E /* Mulish-Bold.ttf in Resources */,
 				CD0D00F825EA32E0004F5AD1 /* Assets.xcassets in Resources */,
+				CDC8BA9525EE4BA800DC2B3E /* README.txt in Resources */,
+				CDC8BA9225EE4BA800DC2B3E /* Mulish-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +321,7 @@
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
 				CDCEC6A825EC381600E3AD3E /* ResponseModel.swift in Sources */,
+				CDC8BA8925EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
 				CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */,
 				CDCEC68425EC2DE300E3AD3E /* CustomViewController.swift in Sources */,
