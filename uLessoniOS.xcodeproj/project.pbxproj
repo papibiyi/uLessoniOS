@@ -127,6 +127,15 @@
 			path = Mulish;
 			sourceTree = "<group>";
 		};
+		CDCC688E25EEBAE400592EFA /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */,
+				CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
 		CDCEC64825EC121A00E3AD3E /* app */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +213,7 @@
 		CDCEC65C25EC14FE00E3AD3E /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				CDCC688E25EEBAE400592EFA /* protocol */,
 				CDCEC66C25EC169400E3AD3E /* enum */,
 				CDCEC66B25EC168500E3AD3E /* class */,
 			);
@@ -238,9 +248,7 @@
 				CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */,
 				CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */,
 				CDC8BAA125EE5F2D00DC2B3E /* DashboardViewModel.swift */,
-				CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */,
 				CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */,
-				CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
