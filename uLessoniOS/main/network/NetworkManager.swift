@@ -69,11 +69,7 @@ class NetworkManager {
                         completionHandler(.failure(CustomHttpError.Unknown(error: String(format: UnknownError.unknownErrorArgs, UnknownError.data.rawValue))))
                         return}
                     
-                    guard let t = T.self as? T else {
-                        completionHandler(.failure(CustomHttpError.Unknown(error: String(format: UnknownError.unknownErrorArgs, UnknownError.decodableType.rawValue))))
-                        return}
-                    
-                    completionHandler(JSONDecoder.decode(type: t, from: data))
+                    completionHandler(Decoder<T>().decode(from: data))
                 }
             case (400...499):
                 completionHandler(.failure(CustomHttpError.BadRequest))

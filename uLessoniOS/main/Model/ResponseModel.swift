@@ -8,6 +8,10 @@
 import Foundation
 
 struct Response: Codable {
+    let data: ResponseModel?
+}
+
+struct ResponseModel: Codable {
     let status, message: String?
     let subjects: [Subject]?
 }
