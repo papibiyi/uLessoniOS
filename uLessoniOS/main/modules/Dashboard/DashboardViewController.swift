@@ -61,4 +61,9 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: ((Int(self.contentView.collectionView.frame.width - 10) / 2)), height: 90)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let subject = self.viewModel.subjects[indexPath.row]
+        self.navigationController?.pushViewController(SubjectViewController(subject: subject), animated: true)
+    }
 }

@@ -22,6 +22,10 @@
 		CDC8BAA525EE5F6400DC2B3E /* DataFetchedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */; };
 		CDC8BAA825EE608800DC2B3E /* DashboardWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */; };
 		CDC8BAAB25EE62E600DC2B3E /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */; };
+		CDCC689425EEBBB900592EFA /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC689325EEBBB900592EFA /* SubjectViewController.swift */; };
+		CDCC689725EEBBD800592EFA /* SubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC689625EEBBD800592EFA /* SubjectView.swift */; };
+		CDCC689A25EEBBF300592EFA /* ChapterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC689925EEBBF300592EFA /* ChapterCollectionViewCell.swift */; };
+		CDCC689D25EEBCB700592EFA /* ChapterContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC689C25EEBCB700592EFA /* ChapterContainerView.swift */; };
 		CDCEC65525EC12DF00E3AD3E /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */; };
 		CDCEC65625EC12DF00E3AD3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDCEC65425EC12DF00E3AD3E /* OFL.txt */; };
 		CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */; };
@@ -55,6 +59,10 @@
 		CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchedDelegate.swift; sourceTree = "<group>"; };
 		CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWebService.swift; sourceTree = "<group>"; };
 		CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
+		CDCC689325EEBBB900592EFA /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		CDCC689625EEBBD800592EFA /* SubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectView.swift; sourceTree = "<group>"; };
+		CDCC689925EEBBF300592EFA /* ChapterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewCell.swift; sourceTree = "<group>"; };
+		CDCC689C25EEBCB700592EFA /* ChapterContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterContainerView.swift; sourceTree = "<group>"; };
 		CDCEC65325EC12DF00E3AD3E /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 		CDCEC65425EC12DF00E3AD3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		CDCEC65825EC13B200E3AD3E /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -136,6 +144,42 @@
 			path = protocol;
 			sourceTree = "<group>";
 		};
+		CDCC688F25EEBB1400592EFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8BA8725EE4A3700DC2B3E /* Cell */,
+				CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDCC689025EEBB7900592EFA /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC689125EEBB8100592EFA /* Views */,
+				CDCC689325EEBBB900592EFA /* SubjectViewController.swift */,
+			);
+			path = Subject;
+			sourceTree = "<group>";
+		};
+		CDCC689125EEBB8100592EFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC689225EEBB8700592EFA /* Cell */,
+				CDCC689625EEBBD800592EFA /* SubjectView.swift */,
+				CDCC689C25EEBCB700592EFA /* ChapterContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDCC689225EEBB8700592EFA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC689925EEBBF300592EFA /* ChapterCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CDCEC64825EC121A00E3AD3E /* app */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +231,7 @@
 		CDCEC65025EC12B200E3AD3E /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				CDCC689025EEBB7900592EFA /* Subject */,
 				CDCEC67B25EC27B000E3AD3E /* Dashboard */,
 			);
 			path = modules;
@@ -244,9 +289,8 @@
 		CDCEC67B25EC27B000E3AD3E /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				CDC8BA8725EE4A3700DC2B3E /* Cell */,
+				CDCC688F25EEBB1400592EFA /* Views */,
 				CDCEC67C25EC27D300E3AD3E /* DashboardViewController.swift */,
-				CDCEC6A325EC35D100E3AD3E /* DashboardView.swift */,
 				CDC8BAA125EE5F2D00DC2B3E /* DashboardViewModel.swift */,
 				CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */,
 			);
@@ -338,10 +382,14 @@
 			files = (
 				CDCEC66725EC164300E3AD3E /* NetworkManager.swift in Sources */,
 				CDC8BAA825EE608800DC2B3E /* DashboardWebService.swift in Sources */,
+				CDCC689D25EEBCB700592EFA /* ChapterContainerView.swift in Sources */,
 				CDCEC6A425EC35D100E3AD3E /* DashboardView.swift in Sources */,
 				CDC8BA9A25EE4DA600DC2B3E /* Font.swift in Sources */,
+				CDCC689425EEBBB900592EFA /* SubjectViewController.swift in Sources */,
 				CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */,
 				CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */,
+				CDCC689A25EEBBF300592EFA /* ChapterCollectionViewCell.swift in Sources */,
+				CDCC689725EEBBD800592EFA /* SubjectView.swift in Sources */,
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
 				CDC8BAA525EE5F6400DC2B3E /* DataFetchedDelegate.swift in Sources */,
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
