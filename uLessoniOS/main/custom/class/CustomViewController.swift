@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomViewController<content: UIView>: UIViewController {
-    var contentView: UIView
+    var contentView: content
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         contentView = content()

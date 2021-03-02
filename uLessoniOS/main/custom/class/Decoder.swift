@@ -17,4 +17,3 @@ class Decoder<T: Decodable> {
         }
     }
 }
-
