@@ -9,6 +9,8 @@ import UIKit
 
 class DashboardView: UIView {
     
+    var collectionViewHeightConstraint: NSLayoutConstraint?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -47,7 +49,8 @@ class DashboardView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
         collectionView.backgroundColor = .red
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        collectionViewHeightConstraint = collectionView.heightAnchor.constraint(equalToConstant: 0)
+        collectionViewHeightConstraint?.isActive = true
         return collectionView
     }()
     
@@ -69,6 +72,19 @@ class DashboardView: UIView {
     }()
     
 
+    func updateCollectionViewHeight(byCount: Int) {
+        let heightConstant = CGFloat(88)
+        if byCount == 2 || byCount == 1 {
+            collectionViewHeightConstraint?.constant = heightConstant
+        }else if byCount == 4 {
+            collectionViewHeightConstraint?.constant = heightConstant * 2
+        } else if byCount > 4 {
+            collectionViewHeightConstraint?.constant = heightConstant * 3
+        }else {
+            collectionViewHeightConstraint?.constant = 0
+        }
+    }
+    
     
     private func setupView(){
         self.backgroundColor = UIColor(red: 0.929, green: 0.929, blue: 0.933, alpha: 1)
