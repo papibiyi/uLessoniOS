@@ -13,6 +13,8 @@ Given more time i would have done the following:
 * Proper error messages and empty states when there is no internet connection
 * Unit Testing
 * Use of coordinator for navigation
+* Adding Comment and documentation to code
+
 
 
 
