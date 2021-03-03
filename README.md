@@ -1,6 +1,12 @@
 # uLessoniOS
 
-#### STEP TO RUN PROJECT
+### Project Details 
+Project was done in:
+* Xcode Version 12.0.1 (12A7300)
+* Swift 5
+* iOS Deployment target 14.0
+
+#### Technical Details
 * Used MVVM model as its cleaner and more straight foward
 * Created all view programatically
 
