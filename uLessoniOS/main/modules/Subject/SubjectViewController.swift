@@ -13,6 +13,9 @@ class SubjectViewController: CustomViewController<SubjectView> {
     init(subject: Subject) {
         self.subject = subject
         super.init(nibName: nil, bundle: nil)
+        setupBackArrowAction()
+        self.contentView.pageTitleLabel.text = subject.name
+        self.contentView.addChapters(chapters: subject.chapters ?? [])
     }
     
     required init?(coder: NSCoder) {
@@ -21,5 +24,18 @@ class SubjectViewController: CustomViewController<SubjectView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @objc private func didPressBackArrow(){
+        self.navigationController?.popViewController(animated: true)
+    }
+        
+    private func setupBackArrowAction(){
+        self.contentView.backArrow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didPressBackArrow)))
+    }
+    
+    private func onLessonSelected(){
+        self.contentView.onLessonSelected = { lesson in
+        }
     }
 }

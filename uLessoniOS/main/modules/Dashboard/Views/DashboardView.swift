@@ -94,7 +94,7 @@ class DashboardView: UIView {
     }
     
     private func setupView(){
-        self.backgroundColor = UIColor(red: 0.929, green: 0.929, blue: 0.933, alpha: 1)
+        self.backgroundColor = UIColor(named: "uBackground")
         addSubview(handLogoImageView)
         addSubview(curveLogoImageView)
         addSubview(scrollView)
