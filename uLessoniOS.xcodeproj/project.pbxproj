@@ -11,6 +11,8 @@
 		CD0D00F125EA32DE004F5AD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D00F025EA32DE004F5AD1 /* SceneDelegate.swift */; };
 		CD0D00F825EA32E0004F5AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0D00F725EA32E0004F5AD1 /* Assets.xcassets */; };
 		CD0D00FB25EA32E0004F5AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0D00F925EA32E0004F5AD1 /* LaunchScreen.storyboard */; };
+		CD53388125EFAB8D00C951FB /* VdeoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53388025EFAB8D00C951FB /* VdeoPlayerView.swift */; };
+		CD53388625EFABA800C951FB /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53388525EFABA800C951FB /* VideoPlayerViewController.swift */; };
 		CDC8BA8925EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BA8825EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift */; };
 		CDC8BA9225EE4BA800DC2B3E /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA8D25EE4BA800DC2B3E /* Mulish-Regular.ttf */; };
 		CDC8BA9325EE4BA800DC2B3E /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8BA8E25EE4BA800DC2B3E /* Mulish-Bold.ttf */; };
@@ -48,6 +50,8 @@
 		CD0D00F725EA32E0004F5AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0D00FA25EA32E0004F5AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0D00FC25EA32E0004F5AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD53388025EFAB8D00C951FB /* VdeoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VdeoPlayerView.swift; sourceTree = "<group>"; };
+		CD53388525EFABA800C951FB /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		CDC8BA8825EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDC8BA8D25EE4BA800DC2B3E /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		CDC8BA8E25EE4BA800DC2B3E /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 				CD0D00FC25EA32E0004F5AD1 /* Info.plist */,
 			);
 			path = uLessoniOS;
+			sourceTree = "<group>";
+		};
+		CD53387F25EFAB6000C951FB /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CD53388025EFAB8D00C951FB /* VdeoPlayerView.swift */,
+				CD53388525EFABA800C951FB /* VideoPlayerViewController.swift */,
+			);
+			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
 		CDC8BA8725EE4A3700DC2B3E /* Cell */ = {
@@ -231,6 +244,7 @@
 		CDCEC65025EC12B200E3AD3E /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				CD53387F25EFAB6000C951FB /* VideoPlayer */,
 				CDCC689025EEBB7900592EFA /* Subject */,
 				CDCEC67B25EC27B000E3AD3E /* Dashboard */,
 			);
@@ -395,7 +409,9 @@
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
 				CDCEC6A825EC381600E3AD3E /* ResponseModel.swift in Sources */,
 				CDC8BAA225EE5F2D00DC2B3E /* DashboardViewModel.swift in Sources */,
+				CD53388625EFABA800C951FB /* VideoPlayerViewController.swift in Sources */,
 				CDC8BA9E25EE505F00DC2B3E /* SubjectDataResolver.swift in Sources */,
+				CD53388125EFAB8D00C951FB /* VdeoPlayerView.swift in Sources */,
 				CDC8BA8925EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift in Sources */,
 				CD0D00EF25EA32DE004F5AD1 /* AppDelegate.swift in Sources */,
 				CDCEC66125EC156E00E3AD3E /* UIViewController+Extension.swift in Sources */,

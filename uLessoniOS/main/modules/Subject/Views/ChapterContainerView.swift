@@ -9,7 +9,7 @@ import UIKit
 
 class ChapterContainerView: UIView {
     var lessons: [Lesson] = []
-    var onLessonSelected: ((Lesson) -> ())? = nil
+    var onLessonSelected: (((lesson: Lesson, chapterTitle: String)) -> ())? = nil
     
     init(name: String, lessons: [Lesson]) {
         super.init(frame: .zero)
@@ -79,7 +79,7 @@ extension ChapterContainerView: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let lesson = lessons[indexPath.row]
-        onLessonSelected?(lesson)
+        onLessonSelected?((lesson, chapterTitleLabel.text ?? ""))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

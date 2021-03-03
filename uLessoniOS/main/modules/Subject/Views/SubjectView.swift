@@ -8,7 +8,7 @@
 import UIKit
 
 class SubjectView: UIView {
-    var onLessonSelected: ((Lesson) -> ())? = nil
+    var onLessonSelected: (((lesson: Lesson, chapterTitle: String)) -> ())? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,7 +50,7 @@ class SubjectView: UIView {
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.spacing = 20
+        stackView.spacing = 40
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()

@@ -14,6 +14,7 @@ class SubjectViewController: CustomViewController<SubjectView> {
         self.subject = subject
         super.init(nibName: nil, bundle: nil)
         setupBackArrowAction()
+        onLessonSelected()
         self.contentView.pageTitleLabel.text = subject.name
         self.contentView.addChapters(chapters: subject.chapters ?? [])
     }
@@ -35,7 +36,8 @@ class SubjectViewController: CustomViewController<SubjectView> {
     }
     
     private func onLessonSelected(){
-        self.contentView.onLessonSelected = { lesson in
+        self.contentView.onLessonSelected = { data in
+            self.navigationController?.pushViewController(VideoPlayerViewController(chapterTitle: data.chapterTitle, lesson: data.lesson), animated: true)
         }
     }
 }

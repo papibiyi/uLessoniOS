@@ -33,6 +33,6 @@ struct Lesson: Codable {
     let id: Int?
     let name: String?
     let icon: String?
-    let mediaURL: String?
-    let subjectID, chapterID: Int?
+    let media_url: String?
+    let subject_id, chapter_id: Int?
 }
