@@ -56,6 +56,11 @@ class DashboardView: UIView {
         return collectionView
     }()
     
+    let recentlyWatchedView: RecentlyWatchedView = {
+        let view = RecentlyWatchedView()
+        return view
+    }()
+    
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.refreshControl = UIRefreshControl()
@@ -72,6 +77,7 @@ class DashboardView: UIView {
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(collectionView)
+        stackView.addArrangedSubview(recentlyWatchedView)
         return stackView
     }()
     

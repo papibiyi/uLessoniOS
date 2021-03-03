@@ -37,6 +37,7 @@ class SubjectViewController: CustomViewController<SubjectView> {
     
     private func onLessonSelected(){
         self.contentView.onLessonSelected = { data in
+            RecentlyWatchedData.saveToRecetlyWatched(data: RecentlyWatchedDataModel(chapterTitle: data.chapterTitle, subjectName: self.subject.name ?? "", lesson: data.lesson))
             self.navigationController?.pushViewController(VideoPlayerViewController(chapterTitle: data.chapterTitle, lesson: data.lesson), animated: true)
         }
     }

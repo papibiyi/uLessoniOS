@@ -24,6 +24,9 @@
 		CDC8BAA525EE5F6400DC2B3E /* DataFetchedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */; };
 		CDC8BAA825EE608800DC2B3E /* DashboardWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */; };
 		CDC8BAAB25EE62E600DC2B3E /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */; };
+		CDCA08D125EFD55E000D9CEA /* RecentlyWatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA08D025EFD55E000D9CEA /* RecentlyWatchedView.swift */; };
+		CDCA08D425EFD595000D9CEA /* RecentlyWatchedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA08D325EFD595000D9CEA /* RecentlyWatchedCollectionViewCell.swift */; };
+		CDCA08D725EFDB2F000D9CEA /* RecentlyWatchedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA08D625EFDB2F000D9CEA /* RecentlyWatchedData.swift */; };
 		CDCC689425EEBBB900592EFA /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC689325EEBBB900592EFA /* SubjectViewController.swift */; };
 		CDCC689725EEBBD800592EFA /* SubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC689625EEBBD800592EFA /* SubjectView.swift */; };
 		CDCC689A25EEBBF300592EFA /* ChapterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC689925EEBBF300592EFA /* ChapterCollectionViewCell.swift */; };
@@ -63,6 +66,9 @@
 		CDC8BAA425EE5F6400DC2B3E /* DataFetchedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchedDelegate.swift; sourceTree = "<group>"; };
 		CDC8BAA725EE608800DC2B3E /* DashboardWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWebService.swift; sourceTree = "<group>"; };
 		CDC8BAAA25EE62E600DC2B3E /* WebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
+		CDCA08D025EFD55E000D9CEA /* RecentlyWatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyWatchedView.swift; sourceTree = "<group>"; };
+		CDCA08D325EFD595000D9CEA /* RecentlyWatchedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyWatchedCollectionViewCell.swift; sourceTree = "<group>"; };
+		CDCA08D625EFDB2F000D9CEA /* RecentlyWatchedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyWatchedData.swift; sourceTree = "<group>"; };
 		CDCC689325EEBBB900592EFA /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		CDCC689625EEBBD800592EFA /* SubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectView.swift; sourceTree = "<group>"; };
 		CDCC689925EEBBF300592EFA /* ChapterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				CDC8BA8825EE4A5A00DC2B3E /* SubjectCollectionViewCell.swift */,
+				CDCA08D025EFD55E000D9CEA /* RecentlyWatchedView.swift */,
+				CDCA08D325EFD595000D9CEA /* RecentlyWatchedCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				CDCEC67125EC20AF00E3AD3E /* Decoder.swift */,
 				CDCEC68325EC2DE300E3AD3E /* CustomViewController.swift */,
 				CDC8BA9D25EE505F00DC2B3E /* SubjectDataResolver.swift */,
+				CDCA08D625EFDB2F000D9CEA /* RecentlyWatchedData.swift */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -397,14 +406,17 @@
 				CDCEC66725EC164300E3AD3E /* NetworkManager.swift in Sources */,
 				CDC8BAA825EE608800DC2B3E /* DashboardWebService.swift in Sources */,
 				CDCC689D25EEBCB700592EFA /* ChapterContainerView.swift in Sources */,
+				CDCA08D425EFD595000D9CEA /* RecentlyWatchedCollectionViewCell.swift in Sources */,
 				CDCEC6A425EC35D100E3AD3E /* DashboardView.swift in Sources */,
 				CDC8BA9A25EE4DA600DC2B3E /* Font.swift in Sources */,
 				CDCC689425EEBBB900592EFA /* SubjectViewController.swift in Sources */,
 				CDCEC65925EC13B200E3AD3E /* UIFont+Extension.swift in Sources */,
 				CDCEC66E25EC16AF00E3AD3E /* RequestType.swift in Sources */,
+				CDCA08D725EFDB2F000D9CEA /* RecentlyWatchedData.swift in Sources */,
 				CDCC689A25EEBBF300592EFA /* ChapterCollectionViewCell.swift in Sources */,
 				CDCC689725EEBBD800592EFA /* SubjectView.swift in Sources */,
 				CDCEC65E25EC151100E3AD3E /* CustomHttpError.swift in Sources */,
+				CDCA08D125EFD55E000D9CEA /* RecentlyWatchedView.swift in Sources */,
 				CDC8BAA525EE5F6400DC2B3E /* DataFetchedDelegate.swift in Sources */,
 				CDCEC67825EC249F00E3AD3E /* UnknownError.swift in Sources */,
 				CDCEC6A825EC381600E3AD3E /* ResponseModel.swift in Sources */,
