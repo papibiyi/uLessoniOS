@@ -239,6 +239,8 @@ class VideoPlayerView: UIView {
     @objc private func updateSlider(){
         let duration : CMTime = player?.currentItem?.duration ?? CMTime()
         let currentTime : CMTime = player?.currentTime() ?? CMTime()
+        currentTimeLabel.text = getRedableTime(time: currentTime)
+        totalDurationLabel.text = getRedableTime(time: duration)
         let value = CMTimeGetSeconds(currentTime) / CMTimeGetSeconds(duration)
         if player?.rate == 1 {
             slider.value = Float(value)
@@ -248,9 +250,12 @@ class VideoPlayerView: UIView {
     func getRedableTime(time: CMTime?) -> String? {
         guard let time = time else {return nil}
         let durationTime = CMTimeGetSeconds(time)
-        let minutes = durationTime / 60
+        let minutes = durationTime.truncatingRemainder(dividingBy: 3600) / 60
         let seconds = durationTime.truncatingRemainder(dividingBy: 60)
-        return "\(minutes):\(seconds)"
+        let mS = "\("\(minutes)".split(separator: ".")[0])"
+        let sS = "\("\(seconds)".split(separator: ".")[0])"
+        let redable = "\(mS):\(sS)"
+        return (redable == "nan:nan") ? "0.0" : redable
     }
     
     @objc func playbackSliderValueChanged(_ playbackSlider:UISlider)
