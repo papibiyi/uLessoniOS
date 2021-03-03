@@ -42,10 +42,10 @@ class ChapterCollectionViewCell: UICollectionViewCell {
         
         
         DispatchQueue.global(qos: .background).async {
-            let url = URL(string: lesson.icon ?? "")
-            let data = try? Data(contentsOf: url!)
+            guard let url = URL(string: lesson.icon ?? "") else {return}
+            guard let data = try? Data(contentsOf: url) else {return}
             DispatchQueue.main.async {
-                self.cellImageView.image = UIImage(data: data!)
+                self.cellImageView.image = UIImage(data: data)
             }
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class VideoPlayerView: UIView {
+    var timer: Timer?
     var controlViewHidden = true
     var avPlayer: AVQueuePlayer?
     let applicationWindow =  UIApplication.shared.windows.first!.rootViewController!.view!
@@ -55,8 +56,6 @@ class VideoPlayerView: UIView {
         self.playerLooper = AVPlayerLooper(player: (self.player as? AVQueuePlayer)!, templateItem: playerItem)
         
         avPlayer?.automaticallyWaitsToMinimizeStalling = true
-        avPlayer?.isMuted = true
-
     }
     
     func play(){
@@ -69,12 +68,13 @@ class VideoPlayerView: UIView {
     }
     
     func deinitalize(){
+        self.timer = nil
         self.avPlayer = nil
         self.playerLooper = nil
     }
     
     private func setupControlView() {
-        setupTapActionOnControlView()
+        setupTapActions()
         addSubview(controlViewContainer)
         
         controlViewContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -102,6 +102,10 @@ class VideoPlayerView: UIView {
         view.addSubview(pausePlayContainer)
         view.addSubview(rewindView)
         view.addSubview(fowardView)
+        view.addSubview(currentTimeLabel)
+        view.addSubview(slider)
+        view.addSubview(totalDurationLabel)
+
         
         pausePlayContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         pausePlayContainer.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -112,6 +116,15 @@ class VideoPlayerView: UIView {
         fowardView.leftAnchor.constraint(equalTo: pausePlayContainer.rightAnchor, constant: 30).isActive = true
         fowardView.centerYAnchor.constraint(equalTo: pausePlayContainer.centerYAnchor).isActive = true
 
+        currentTimeLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        currentTimeLabel.centerYAnchor.constraint(equalTo: slider.centerYAnchor).isActive = true
+        
+        slider.leftAnchor.constraint(equalTo: currentTimeLabel.rightAnchor, constant: 20).isActive = true
+        slider.rightAnchor.constraint(equalTo: totalDurationLabel.leftAnchor, constant: -20).isActive = true
+        slider.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
+
+        totalDurationLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        totalDurationLabel.centerYAnchor.constraint(equalTo: slider.centerYAnchor).isActive = true
         
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -132,6 +145,7 @@ class VideoPlayerView: UIView {
     let rewindView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "rewind_logo")
+        view.isUserInteractionEnabled = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -139,8 +153,35 @@ class VideoPlayerView: UIView {
     let fowardView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "foward_logo")
+        view.isUserInteractionEnabled = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
+    }()
+    
+    let slider: UISlider = {
+        let view = UISlider()
+        view.minimumValue = 0
+        view.maximumValue = 1
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let currentTimeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "\t"
+        label.font = UIFont.of(type: Font.Mulish.bold.rawValue, size: 10)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let totalDurationLabel: UILabel = {
+        let label = UILabel()
+        label.text = "\t"
+        label.font = UIFont.of(type: Font.Mulish.bold.rawValue, size: 10)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
 
 
@@ -154,14 +195,80 @@ class VideoPlayerView: UIView {
     
     
     @objc private func onControlViewTap(){
+        updateSlider()
         controlViewHidden = !controlViewHidden
         controlContainer.isHidden = controlViewHidden
+        timer = controlViewHidden ? nil : Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
         pausePlayLogo.image = UIImage(named: (avPlayer?.rate == 1) ? "pause_logo" : "play_logo")
         controlViewContainer.backgroundColor = controlViewHidden ? .clear : UIColor.black.withAlphaComponent(0.3)
     }
     
-    private func setupTapActionOnControlView(){
+    @objc private func onFowardPressed(){
+        guard let duration = player?.currentItem?.duration else { return }
+        guard let cTime = player?.currentTime() else {return}
+        let currentTime = CMTimeGetSeconds(cTime)
+        let newTime = currentTime + 10.0
+        if newTime < (CMTimeGetSeconds(duration) - 10.0){
+            let time: CMTime = CMTimeMake(value: Int64(newTime*1000), timescale: 1000)
+            player?.seek(to: time)
+        }
+        updateSlider()
+    }
+    
+    @objc private func onRewindPressed(){
+        guard let cTime = player?.currentTime() else {return}
+        let currentTime = CMTimeGetSeconds(cTime)
+        var newTime = currentTime - 10.0
+        if newTime < 0 {
+            newTime = 0
+        }
+        let time: CMTime = CMTimeMake(value: Int64(newTime*1000), timescale: 1000)
+        player?.seek(to: time)
+        updateSlider()
+    }
+    
+    @objc private func playPausedPressed(){
+        if avPlayer?.rate == 1 {
+            pause()
+        }else {
+            play()
+        }
+        pausePlayLogo.image = UIImage(named: (avPlayer?.rate == 1) ? "pause_logo" : "play_logo")
+    }
+    
+    @objc private func updateSlider(){
+        let duration : CMTime = player?.currentItem?.duration ?? CMTime()
+        let currentTime : CMTime = player?.currentTime() ?? CMTime()
+        let value = CMTimeGetSeconds(currentTime) / CMTimeGetSeconds(duration)
+        if player?.rate == 1 {
+            slider.value = Float(value)
+        }
+    }
+    
+    func getRedableTime(time: CMTime?) -> String? {
+        guard let time = time else {return nil}
+        let durationTime = CMTimeGetSeconds(time)
+        let minutes = durationTime / 60
+        let seconds = durationTime.truncatingRemainder(dividingBy: 60)
+        return "\(minutes):\(seconds)"
+    }
+    
+    @objc func playbackSliderValueChanged(_ playbackSlider:UISlider)
+    {
+        slider.maximumValue = Float(CMTimeGetSeconds(player?.currentItem?.duration ?? CMTime()))
+        let seconds : Int64 = Int64(playbackSlider.value)
+        let targetTime:CMTime = CMTimeMake(value: seconds, timescale: 1)
+        player?.seek(to: targetTime)
+    }
+
+
+    
+    private func setupTapActions(){
         controlViewContainer.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onControlViewTap)))
+        fowardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onFowardPressed)))
+        rewindView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onRewindPressed)))
+        pausePlayContainer.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(playPausedPressed)))
+        slider.addTarget(self, action: #selector(self.playbackSliderValueChanged(_:)), for: .valueChanged)
     }
 }
 

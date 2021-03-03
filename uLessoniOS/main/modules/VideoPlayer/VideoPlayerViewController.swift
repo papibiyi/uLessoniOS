@@ -26,6 +26,11 @@ class VideoPlayerViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        videoPlayer.timer?.invalidate()
+    }
+    
     private lazy var videoPlayer: VideoPlayerView = {
         let videoPlayer = VideoPlayerView()
         videoPlayer.backgroundColor = .black
