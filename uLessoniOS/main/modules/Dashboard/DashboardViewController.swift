@@ -15,6 +15,7 @@ class DashboardViewController: CustomViewController<DashboardView> {
         super.viewDidLoad()
         setupCollectionView()
         setupScrollView()
+        onRecentlyWatchedSelected()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +37,9 @@ class DashboardViewController: CustomViewController<DashboardView> {
     
     private func populateRecentlyWatched(){
         contentView.recentlyWatchedView.inject(data: RecentlyWatchedData.getRecentlyWatched())
+    }
+    
+    private func onRecentlyWatchedSelected(){
         contentView.recentlyWatchedView.onRecentlyWatchedSelected = {[weak self] data in
             self?.navigationController?.pushViewController(VideoPlayerViewController(chapterTitle: data.chapterTitle, lesson: data.lesson), animated: true)
         }
